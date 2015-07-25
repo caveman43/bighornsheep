@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-sm-3 col-md-2">
+        <ng-include src="'views/sidebar.html'"/>
+    </div>
+    <div class="col-sm-8 col-md-7">
+        <div class="search-text-box-container">
+            <input class="form-control search-text-box" type="text" placeholder="search by bank, city, state" ng-model="queryText"/>
+        </div>
+        <div class="search-result-container">
+            <ul class="list-unstyled">
+                <li class="search-result-list-item" dir-paginate="bank in bankDetails | filter:queryText | itemsPerPage:pageSize" current-page="currentPage">
+                    <div class="bank-detail-container">
+                        <div class="bank-logo-container">
+                            <img src="{{bank.logo}}" width="50px" height="50px"/>
+                        </div>
+                        <div class="bank-ifsc-code">IFSC Code : {{bank.ifsc}}
+                            <div class="bank-exchange-rate pull-right">$1 = Rs. 63.3</div>
+                        </div>
+                        <div class="bank-name">{{bank.name}}</div>
+                        <div class="bank-address">
+                            {{bank.address}}
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="search-result-pagination-footer pull-right">
+                <dir-pagination-controls boundary-links="true" template-url="views/templates/dirPagination.tpl.html"></dir-pagination-controls>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 co-md-4">
+        <div class="search-previous-saved">
+            <div class="div-content-title">Recently searched</div>
+            <div class="">
+                <p>ICICI BANK ICIC34535345, Ujjain branch</p>
+                <p>AXIS BANK AXIS, Dewas branch</p>
+                <p>YES BANK YES97879234, Indore branch</p>
+            </div>
+        </div>
+    </div>
+</div>
