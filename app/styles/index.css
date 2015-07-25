@@ -1,21 +1,8 @@
-/*.bankinfo-container {*/
-/*background-color: rosybrown;*/
-/*display: inline-block;*/
-/*height: 100px;*/
-/*width: 500px;*/
-/*}*/
-/*.bankinfo-logo {*/
-/*background-image: url('../images/icici_bank_logo_3895.gif');*/
-/*float: left;*/
-/*height: 10px;*/
-/*width: 10px;*/
-/*}*/
-/*.bankinfo-detail-box {*/
-/*float: left;*/
-/*}*/
-/*.bankinfo-ifsc-code {*/
-/*float: left;*/
-/*}*/
+.div-content-title {
+    text-align: center;
+    color: white;
+    background-color: darkgray;
+}
 
 .search-text-box-container {
     margin: 10px 10px 20px 20px;
@@ -38,6 +25,15 @@
     border: 1px solid rgb(204, 204, 204);
     width: 100%;
     margin-bottom: 5px;
+}
+
+.search-previous-saved {
+    width: 100%;
+    background-color: whitesmoke;
+    /* display: inline-block; */
+    /* padding: 10px; */
+    margin-top: 1px;
+    border: 1px solid rgb(210, 210, 210);
 }
 
 .filter-item-container {

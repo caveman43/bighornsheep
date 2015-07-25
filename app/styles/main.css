@@ -1,6 +1,5 @@
 /* Space out content a bit */
 body {
-  padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -24,9 +23,10 @@ body {
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
+  padding: 10px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  background-color: #ffffff;
 }
 
 /* Customize container */
@@ -50,7 +50,6 @@ body {
   }
   /* Space out the masthead */
   .header {
-      margin-bottom: 10px;
       background-color: black;
       padding: 5px;
   }
@@ -59,17 +58,13 @@ body {
 /* Responsive sidebar */
 @media (min-width: 768px) {
     .sidebar {
-        position: fixed;
-        top: 51px;
-        bottom: 0;
-        left: 0;
-        z-index: 1000;
-        display: block;
+        width: 100%;
+        height: 700px;
         padding-top: 110px;
         padding-left: 10px;
         padding-right: 10px;
-        overflow-x: hidden;
-        overflow-y: auto;
+        /*overflow-x: auto;*/
+        /*overflow-y: auto;*/
         background-color: #f5f5f5;
         border-right: 1px solid #D5D5D5;
     }
