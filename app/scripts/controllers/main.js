@@ -192,14 +192,57 @@ angular.module('bighornsheepApp')
             'United Bank Of India',
             'Vijaya Bank',
             'Yes Bank'];
-//        $scope.$watch('queryText',function(){
-//            $scope.filteredBankDetails = filterFilter($scope.bankDetails, $scope.queryText.$);
+        $scope.statesList = ['Andaman and Nicobar Islands',
+            'Andhra Pradesh',
+            'Arunachal Pradesh',
+            'Assam',
+            'Bihar',
+            'Chandigarh',
+            'Chhattisgarh',
+            'Dadra and Nagar',
+            'Daman and Diu',
+            'Delhi',
+            'Goa',
+            'Gujarat',
+            'Haryana	',
+            'Himachal Pradesh',
+            'Jammu and Kashmir',
+            'Jharkhand',
+            'Karnataka',
+            'Kerala',
+            'Lakshadweep',
+            'Madhya Pradesh',
+            'Maharashtra',
+            'Manipur',
+            'Meghalaya',
+            'Mizoram',
+            'Nagaland',
+            'Orissa',
+            'Pondicherry',
+            'Punjab',
+            'Rajasthan',
+            'Sikkim',
+            'Tamil Nadu',
+            'Telangana',
+            'Tripura',
+            'Uttar Pradesh',
+            'West Bengal'];
+        $scope.filter = {};
+
+//        $scope.$watch('filter.bankname',function(){
+//            $scope.filteredBankDetails = filterFilter($scope.bankDetails, $scope.filter.bankname);
+//            console.log($scope.filteredBankDetails);
 //            console.log('value changed');
 //        },false);
+
 
 //        $scope.bankSearchFilter = function(bankdetail) {
 //            console.log(bankdetail);
 //            return (bankdetail.name.indexOf($scope.queryText) !== -1) ;
 //        }
+
+        ifscCodeService.greetUser('Pradeep').then(function(res){
+           $scope.greeting = res.title;
+        });
 
     }]);

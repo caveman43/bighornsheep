@@ -9,7 +9,11 @@
                    placeholder="BANK NAME" />
         </li>
         <li class="filter-item">
-            <input ng-model="filter.state" class="form-control" type="text" placeholder="STATE"/>
+            <input type="text"
+                   ng-model="filter.state"
+                   typeahead="state for state in statesList | filter:filter.state | limitTo:10"
+                   class="form-control"
+                   placeholder="STATE NAME" />
         </li>
         <li class="filter-item">
             <input ng-model="filter.city" class="form-control" type="text" placeholder="CITY"/>
