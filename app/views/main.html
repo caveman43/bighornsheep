@@ -9,7 +9,7 @@
         <div class="search-result-container">
             <ul class="list-unstyled">
                 <li class="search-result-list-item"
-                    dir-paginate="bank in bankDetails | filter:filter.bankname | filter:filter.state | itemsPerPage:pageSize"
+                    dir-paginate="bank in bankDetails | filter:filter.bankname | filter:filter.state | filter:filter.city | itemsPerPage:pageSize"
                     current-page="currentPage">
                     <div class="bank-detail-container">
                         <div class="bank-logo-container">
@@ -32,7 +32,7 @@
     </div>
     <div class="col-sm-3 co-md-4">
         <div class="search-previous-saved">
-            <div>{{greeting}}</div>
+            <!--<div>{{greeting}}</div>-->
             <div class="div-content-title">Recently searched</div>
             <div class="">
                 <p>ICICI BANK ICIC34535345, Ujjain branch</p>

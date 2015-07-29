@@ -1,4 +1,5 @@
 <div class="col-sm-3 col-md-2 sidebar">
+    <div class="">Filter search results:</div>
     <ul class="list-unstyled filter-item-container">
         <li class="filter-item">
             <!--<input class="form-control" type="text" placeholder="BANK NAME" ng-model="bankname" />-->
@@ -16,7 +17,11 @@
                    placeholder="STATE NAME" />
         </li>
         <li class="filter-item">
-            <input ng-model="filter.city" class="form-control" type="text" placeholder="CITY"/>
+            <input type="text"
+                   ng-model="filter.city"
+                   typeahead="city for city in cityList | filter:filter.city | limitTo:10"
+                   class="form-control"
+                   placeholder="CITY" />
         </li>
 
     </ul>

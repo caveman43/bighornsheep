@@ -21,6 +21,27 @@ angular.module('bighornsheepApp').factory('ifscCodeService',function($http){
           });
     };
 
+    factory.getStateList = function() {
+       return $http.get('http://localhost:3000/states')
+           .then(function(res){
+                return res.data;
+           });
+    };
+
+    factory.getBanksList = function() {
+       return $http.get('http://localhost:3000/banks')
+           .then(function(res){
+                return res.data;
+           });
+    };
+
+    factory.getCityList = function(state) {
+       return $http.get('http://localhost:3000/cities?state='+state)
+           .then(function(res){
+                return res.data;
+           });
+    };
+
 //    factory.getManagerUsernames = function () {
 //        return $http.get(makeBranchHost + '/cgi-bin/rest.cgi/webgroups?group=CPDBranchManagers')
 //            .then(function (response) {
