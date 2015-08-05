@@ -4,7 +4,7 @@
     </div>
     <div class="col-sm-8 col-md-7">
         <div class="search-text-box-container">
-            <input class="form-control search-text-box" type="text" placeholder="search by bank, city, state" ng-model="queryText"/>
+            <input class="form-control search-text-box" type="text" placeholder="search by bank, city, state" ng-model="queryText" ng-change="queryIFSCCode()"/>
         </div>
         <div class="search-result-container">
             <ul class="list-unstyled">
@@ -33,12 +33,15 @@
     <div class="col-sm-3 co-md-4">
         <div class="search-previous-saved">
             <!--<div>{{greeting}}</div>-->
-            <div class="div-content-title">Recently searched</div>
-            <div class="">
-                <p>ICICI BANK ICIC34535345, Ujjain branch</p>
-                <p>AXIS BANK AXIS, Dewas branch</p>
-                <p>YES BANK YES97879234, Indore branch</p>
+            <!--<div class="div-content-title">Recently searched</div>-->
+            <div class="search-previous-saved-item-container">
+                <div>ICICI BANK LTD</div>
+                <div>ICIC23534534</div>
             </div>
         </div>
+        <div class="right-side-bar">
+
+        </div>
     </div>
+
 </div>

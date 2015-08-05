@@ -20,20 +20,34 @@
 
 .search-result-list-item {
     display: inline-block;
-    background-color: rgb(245, 245, 245);
+    background-color: rgba(186, 224, 246, 0.27);
     padding: 10px;
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid rgba(66, 157, 209, 0.24);
     width: 100%;
     margin-bottom: 5px;
 }
 
 .search-previous-saved {
     width: 100%;
-    background-color: whitesmoke;
     /* display: inline-block; */
     /* padding: 10px; */
     margin-top: 1px;
-    border: 1px solid rgb(210, 210, 210);
+    background-color: rgb(235, 246, 252);
+    border: 1px solid rgb(193, 224, 240);
+}
+
+@media (min-width: 768px) {
+    .right-side-bar {
+        width: 100%;
+        height: 700px;
+        padding-top: 110px;
+        padding-left: 10px;
+        padding-right: 10px;
+        /*overflow-x: auto;*/
+        /*overflow-y: auto;*/
+        background-color: rgb(235, 246, 252);
+        border-left: 1px solid rgb(193, 224, 240);
+    }
 }
 
 .filter-item-container {
@@ -47,6 +61,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+/* Bank info css rules*/
 
 .bank-ifsc-code {
     font-size: larger;

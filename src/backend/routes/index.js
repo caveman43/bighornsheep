@@ -146,6 +146,112 @@ router.get('/banks', function(req, res) {
     res.send(200, banklist);
 });
 
+/* GET method to get bank details by query */
+router.get('/query', function(req, res) {
+   var query = req.query.str;
+   var bankDetails = [
+       {
+           logo : 'images/icici_bank_logo_3895.gif',
+           name : 'ICICI BANK LTD',
+           ifsc : 'ICIC23534534',
+           address : 'ICICI BANK LTD., 2/62,1 TO 4 , SADAR BAZAR, DELHI CANTONMENT, NEW DELHI 110010, DELHI'
+       },
+       {
+           logo : 'images/yes_bank_logo.jpeg',
+           name : 'YES BANK LTD',
+           ifsc : 'YBKL002343450',
+           address : 'YES BANK , UJJAIN, RISHINAGAR, MADHYA PRADESH'
+       },
+       {
+           logo : 'images/axis_bank_logo.jpeg',
+           name : 'AXIS BANK LTD',
+           ifsc : 'AXIS00909090',
+           address : 'AXIS BANK LTD 234 PLOT NO 45, PARDESHI NAGAR, MUMBAI, ANDHERI 234324'
+       },
+       {
+           logo : 'images/pnb_logo.png',
+           name : 'PUNJAB NATIONAL BANK',
+           ifsc : 'PUNB0015000',
+           address : 'LAL BAZAR, DISTT- VADODARA'
+       },
+       {
+           logo : 'images/icici_bank_logo_3895.gif',
+           name : 'ICICI BANK LTD',
+           ifsc : 'ICIC23534534',
+           address : 'ICICI BANK LTD., 2/62,1 TO 4 , DEWAS, MADHYA PRADESH'
+       },
+       {
+           logo : 'images/axis_bank_logo.jpeg',
+           name : 'AXIS BANK LTD',
+           ifsc : 'AXIS00909090',
+           address : 'AXIS BANK LTD 234 PLOT NO 45, PARDESHI NAGAR, MUMBAI, ANDHERI 234324'
+       },
+       {
+           logo : 'images/pnb_logo.png',
+           name : 'PUNJAB NATIONAL BANK',
+           ifsc : 'PUNB0015000',
+           address : 'LAL BAZAR, DISTT- VADODARA'
+       },
+       {
+           logo : 'images/icici_bank_logo_3895.gif',
+           name : 'ICICI BANK LTD',
+           ifsc : 'ICIC23534534',
+           address : 'ICICI BANK LTD., 2/62,1 TO 4 , SADAR BAZAR, DELHI CANTONMENT, NEW DELHI 110010, DELHI'
+       },
+       {
+           logo : 'images/hdfc_bank.jpeg',
+           name : 'HDFC BANK LTD',
+           ifsc : 'HDFC234234234',
+           address : 'HDFC BANK , VISHNUPURI, TUKOGANJ INDORE MADHYA PRADESH'
+       },
+       {
+           logo : 'images/pnb_logo.png',
+           name : 'PUNJAB NATIONAL BANK',
+           ifsc : 'PUNB0015000',
+           address : 'LAL BAZAR, DISTT- VADODARA'
+       },
+       {
+           logo : 'images/icici_bank_logo_3895.gif',
+           name : 'ICICI BANK LTD',
+           ifsc : 'ICIC23534534',
+           address : 'ICICI BANK LTD., 2/62,1 TO 4 , SADAR BAZAR, DELHI CANTONMENT, NEW DELHI 110010, DELHI'
+       },
+       {
+           logo : 'images/axis_bank_logo.jpeg',
+           name : 'AXIS BANK LTD',
+           ifsc : 'AXIS00909090',
+           address : 'AXIS BANK LTD 234 PLOT NO 45, PARDESHI NAGAR, MUMBAI, ANDHERI 234324'
+       },
+       {
+           logo : 'images/pnb_logo.png',
+           name : 'PUNJAB NATIONAL BANK',
+           ifsc : 'PUNB0015000',
+           address : 'LAL BAZAR, DISTT- INDORE'
+       },
+       {
+           logo : 'images/hdfc_bank.jpeg',
+           name : 'HDFC BANK LTD',
+           ifsc : 'HDFC2343423444',
+           address : 'HDFC BANK, ANNAMALAI, TUMKUR, TAMILNADU'
+       },
+       {
+           logo : 'images/axis_bank_logo.jpeg',
+           name : 'AXIS BANK LTD',
+           ifsc : 'AXIS00909090',
+           address : 'AXIS BANK LTD NAI SARAK, UJJAIN MADHYA PRADESH'
+       },
+       {
+           logo : 'images/pnb_logo.png',
+           name : 'PUNJAB NATIONAL BANK',
+           ifsc : 'PUNB0015000',
+           address : 'LAL BAZAR, DISTT- UJJAIN'
+       }
+   ];
+
+
+   res.send(200, bankDetails);
+});
+
 
 
 /* GET method to get list of cities */

@@ -11,7 +11,10 @@ angular.module('bighornsheepApp').factory('ifscCodeService',function($http){
     };
 
     factory.getIFSCCodesBySearchText = function(query) {
-//        return $http.get()
+        return $http.get('http://localhost:3000/query?str='+query)
+            .then(function(res){
+               return res.data;
+            });
     };
 
     factory.greetUser = function(name){
