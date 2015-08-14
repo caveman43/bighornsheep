@@ -266,3 +266,37 @@ router.get('/cities', function(req,res) {
    };
    res.send(200,stateCityMap[state]);
 });
+
+/* Code for shopify stuff */
+
+//var shopifyAPI = require('shopify-node-api');
+
+
+router.get('/authorize', function(req, res){
+    var config = {
+        shop: 'ample-dev-shop.myshopify.com', // MYSHOP.myshopify.com
+        shopify_api_key: '908dc45109bf028f4e559923bda2ce11', // Your API key
+        shopify_shared_secret: '23f17268ea20bf1cc659455dee99a8b5-1439072139', // Your Shared Secret
+        shopify_scope: 'read_orders,read_customers',
+        redirect_uri: 'https://ample-dev-shop.myshopify.com/',
+        state : 'thisismyapp'
+    };
+
+    var auth_url = 'https://'+config.shop+'' +
+        '/admin/oauth/authorize?' +
+        'client_id='+config.shopify_api_key +
+        '&scope='+config.shopify_scope+
+        '&redirect_uri='+config.redirect_uri+
+        '&state='+config.state;
+
+    var encoded_url = encodeURI(auth_url);
+//    console.log(encoded_url);
+
+    // you can redirect the user automatically like so
+    res.redirect(encoded_url);
+
+});
+
+router.get('/finish_auth', function(req, res){
+
+});
